@@ -22,14 +22,14 @@ make -j4
 sudo cp -R ./lib /Library/Java/Extensions 
 ```
 
-Finally build and package the JARs, run unit tests and generate Javadocs
+Finally build and package the `jar`s, run unit tests and generate Javadocs
 ```sh
 cd ..
 # tests fail due to a problem with linking/java.library.path, so skip them
 mvn clean package -DskipTests
 ```
 
-All JARfiles should build except the last one, jcuda-main. This is expected.
+All `jar`files should build except the last one, jcuda-main. This is expected.
 
 Check that from the root JCUDA directory that `find ./ -name *.jar` returns
 
